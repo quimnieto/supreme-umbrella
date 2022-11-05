@@ -3,7 +3,8 @@ import httpStatus from 'http-status';
 import { Controller } from './Controller';
 
 export default class DummyController implements Controller {
-  async run(req: Request, res: Response) {
-    res.status(httpStatus.OK).send();
+  async execute(req: Request, res: Response) {
+    const response: { [key: string]: string } = { Ok: 'Everything Done!' };
+    res.status(httpStatus.OK).send(response);
   }
 }
