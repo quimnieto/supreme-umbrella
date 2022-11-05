@@ -1,10 +1,10 @@
 import { Server } from './server';
 
-export class MoocBackendApp {
+export class RentalBackendApp {
   server?: Server;
 
   async start() {
-    const port = process.env.PORT || '5000';
+    const port = process.env.PORT || '8000';
     this.server = new Server(port);
     return this.server.listen();
   }
@@ -16,5 +16,4 @@ export class MoocBackendApp {
   async stop() {
     return this.server?.stop();
   }
-
 }

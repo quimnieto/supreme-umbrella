@@ -1,0 +1,5 @@
+services:
+
+  Apps.rental.controllers.DummyController:
+    class: ../../controller/DummyController
+    arguments: []
